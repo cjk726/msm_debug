@@ -29,8 +29,8 @@ Rails.application.routes.draw do
   get('/movies/:id', { :controller => 'movies', :action => 'show' })                  # Good
 
   # UPDATE
-  get('/movies/:id/edit_form', { :controller => 'movies', :action => 'edit_form' })
-  get('/update_movie/:id', { :controller => 'movies', :action => 'update_row' })
+  get('/movies/:id/edit_form', { :controller => 'movies', :action => 'edit_form' })   # Good
+  get('/update_movie/:id', { :controller => 'movies', :action => 'update_row' })      # Good
 
   # DELETE
   get('/delete_movie/:id', { :controller => 'movies', :action => 'destroy' })         # Good
