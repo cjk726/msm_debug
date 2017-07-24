@@ -38,8 +38,8 @@ Rails.application.routes.draw do
 
   # Routes for the Role resource:
   # CREATE
-  get('/roles/new_form', { :controller => 'roles', :action => 'new_form' })
-  get('/create_role', { :controller => 'roles', :action => 'create_row' })
+  get('/roles/new_form', { :controller => 'roles', :action => 'new_form' })    # Good ?
+  get('/create_role', { :controller => 'roles', :action => 'create_row' })     # Good ?
 
   # READ
   get('/roles', { :controller => 'roles', :action => 'index' })                             # Good
@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   get('/update_role/:id', { :controller => 'roles', :action => 'update_row' })
 
   # DELETE
-  get('/delete_role/:id', { :controller => 'roles', :action => 'destroy' })
+  get('/delete_role/:id', { :controller => 'roles', :action => 'destroy' })                 # Good
   #------------------------------
 
   # Routes for the Actor resource:
