@@ -28,13 +28,17 @@ class RolesController < ApplicationController
   def update_row
     @role = Role.find(params[:id])
 
-    @role.character_name = params[:character_name]
-    @role.movie_id = params[:movie_id]
-    @role.actor_id = params[:actor_id]
+    # @role.character_name = params[:character_name]
+    # @role.movie_id = params[:movie_id]
+    # @role.actor_id = params[:actor_id]
+    
+    @role.character_name = params["character_name"]
+    @role.movie_id = params["movie_id"]
+    @role.actor_id = params["actor_id"]
 
     @role.save
 
-    render("show")
+    redirect_to("/roles/"+@role.id.to_s)
   end
 
   def destroy
