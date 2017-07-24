@@ -25,8 +25,8 @@ Rails.application.routes.draw do
   get('/create_movie', { :controller => 'movies', :action => 'create_row' })
 
   # READ
-  get('/movies', { :controller => 'movies', :action => 'index' })     # Working here!
-  get('/movies/:id', { :controller => 'movies', :action => 'show' })
+  get('/movies', { :controller => 'movies', :action => 'index' })                     # Good?
+  get('/movies/:id', { :controller => 'movies', :action => 'show' })                  # Good?
 
   # UPDATE
   get('/movies/:id/edit_form', { :controller => 'movies', :action => 'edit_form' })
