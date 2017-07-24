@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get('/update_director/:id', { :controller => 'directors', :action => 'update_row' })
 
   # DELETE
-  get('/delete_director/:id', { :controller => 'directors', :action => 'destroy' })
+  get('/delete_director/:id', { :controller => 'directors', :action => 'destroy' })         # Good
   #------------------------------
 
   # Routes for the Movie resource:
