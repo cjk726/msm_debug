@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Route for bare domain:
-  get('/', { :controller => 'movies', :action => 'index' })
+  get('/', { :controller => 'movies', :action => 'index' })                                 # Good
 
   # Routes for the Director resource:
   # CREATE
@@ -59,8 +59,8 @@ Rails.application.routes.draw do
   get('/create_actor', { :controller => 'actors', :action => 'create_row' })
 
   # READ
-  get('/actors', { :controller => 'actors', :action => 'index' })
-  get('/actors/:id', { :controller => 'actors', :action => 'show' })
+  get('/actors', { :controller => 'actors', :action => 'index' })                           # Good
+  get('/actors/:id', { :controller => 'actors', :action => 'show' })                        # Good
 
   # UPDATE
   get('/actors/:id/edit_form', { :controller => 'actors', :action => 'edit_form' })
