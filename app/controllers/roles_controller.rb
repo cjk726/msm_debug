@@ -18,28 +18,36 @@ class RolesController < ApplicationController
 
     @role.save
 
-    render("show")
+    redirect_to("/roles")
   end
 
   def edit_form
-    @role = Role.find(params[:id])
+    @role = Role.find(params["id"])
+    
+    render("edit_form.html.erb")
   end
 
   def update_row
     @role = Role.find(params[:id])
 
-    @role.character_name = params[:character_name]
-    @role.movie_id = params[:movie_id]
-    @role.actor_id = params[:actor_id]
+    # @role.character_name = params[:character_name]
+    # @role.movie_id = params[:movie_id]
+    # @role.actor_id = params[:actor_id]
+    
+    @role.character_name = params["character_name"]
+    @role.movie_id = params["movie_id"]
+    @role.actor_id = params["actor_id"]
 
     @role.save
 
-    render("show")
+    redirect_to("/roles/"+@role.id.to_s)
   end
 
   def destroy
     @role = Role.find(params[:id])
 
     @role.destroy
+    
+    redirect_to("/roles")
   end
 end
